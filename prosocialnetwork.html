@@ -5,81 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yakshith K D - ProSocial Network</title>
+
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
-        body {
-            font-family: 'Poppins', sans-serif;
+        /* General Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        .container {
+        /* Background Animation */
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(-45deg, #007BFF, #6a11cb, #2575fc, #ff6a00);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            padding: 20px;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        .text-container {
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* Glassmorphism Card */
+        .container {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
             text-align: center;
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 90%;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            animation: fadeIn 1.5s ease-in-out;
         }
 
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Headings */
         h1 {
             font-size: 2.5em;
-            margin-bottom: 10px;
-            color: #007BFF;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
         }
 
         h2 {
             font-size: 1.5em;
+            color: rgba(255, 255, 255, 0.8);
             margin-bottom: 20px;
-            color: #555;
         }
 
+        /* List Styling */
         ul {
             list-style: none;
             padding: 0;
         }
 
         ul li {
-            margin: 10px 0;
+            margin: 15px 0;
         }
 
+        /* Animated Buttons */
         a {
             text-decoration: none;
-            color: #007BFF;
+            font-size: 1.2em;
             font-weight: 600;
-            transition: color 0.3s ease;
+            color: white;
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
         }
 
         a:hover {
-            color: #0056b3;
+            background: rgba(255, 255, 255, 0.4);
+            color: #000;
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.2em;
+            }
+
+            a {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <div class="text-container">
-            <h1>YAKSHITH K D</h1>
-            <h2>ProSocial Network</h2>
-            <ul>
-                <li><a href="https://www.instagram.com/yakshii_gowda_/" target="_blank">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/yakshith-k-d-0200162a1/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://www.facebook.com/profile.php?id=61562740204330" target="_blank">Facebook</a></li>
-                <li><a href="https://github.com/yakshithkd23" target="_blank">GitHub</a></li>
-            </ul>
-        </div>
+        <h1>YAKSHITH K D</h1>
+        <h2>ProSocial Network</h2>
+        <ul>
+            <li><a href="https://www.instagram.com/yakshii_gowda_/" target="_blank">Instagram</a></li>
+            <li><a href="https://unstop.com/u/yakshd8821" target="_blank">Unstop</a></li>
+            <li><a href="https://www.facebook.com/profile.php?id=61562740204330" target="_blank">Facebook</a></li>
+            <li><a href="https://github.com/yakshithkd23" target="_blank">GitHub</a></li>
+        </ul>
     </div>
 </body>
 
